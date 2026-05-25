@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Scusa ❤️</title>
+
+  <style>
+    body {
+      background-color: pink;
+      text-align: center;
+      font-family: Arial;
+      margin-top: 100px;
+    }
+
+    h1 {
+      color: red;
+      font-size: 50px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 20px;
+      margin: 10px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: green;
+      color: white;
+    }
+
+    #no {
+      background-color: red;
+      color: white;
+      position: absolute;
+    }
+
+    #messaggio {
+      display: none;
+      font-size: 30px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Mi perdoni? 🥺</h1>
+
+<img src="https://media.giphy.com/media/l3vRlT2k2L35Cnn5C/giphy.gif" width="250">
+
+<br><br>
+
+<button id="yes">Sì ❤️</button>
+<button id="no">No 😡</button>
+
+<div id="messaggio">
+  GRAZIE TI AMO ❤️
+</div>
+
+<script>
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+  });
+
+  document.getElementById("yes").addEventListener("click", () => {
+    document.getElementById("messaggio").style.display = "block";
+  });
+</script>
+
+</body>
+</html>
